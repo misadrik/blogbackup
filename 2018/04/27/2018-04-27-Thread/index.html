@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="计划," />
+  <meta name="keywords" content="分治,技术,算法," />
 
 
 
@@ -94,18 +94,18 @@
 
 
 
-<meta name="description" content="依然还是先流水帐&amp;gt;.&amp;lt;  今年拿到了驾照，真心不容易，然后当晚就开了一段，后来还开了两次无锡，但开车还是要更多的练习，专注。 2月听说萌妹纸的四六级，她居然和我说什么越刷越低，她那么霸气侧漏的人怎么可以那样，所以成功刷的比她高，哈哈开心，她酷的时候真的很可爱。 2-3月全面改了五笔，真心不容易，此处应该感谢美美，多亏陪我聊天让我成功过渡。 看完了三体1，a walk to rememb">
-<meta name="keywords" content="计划">
+<meta name="description" content="概述准备深入学习下多线程，多进程，协程。之前似乎觉得多线程，多进程一定能让程序运行变快，但似乎涉及更深入的问题。在这篇文章中，学习了若干关于python多线程的知识，学习了一些常用的方法。">
+<meta name="keywords" content="分治,技术,算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2017年计划">
-<meta property="og:url" content="http://www.misad.me/2016/12/31/2016-12-31-plan/index.html">
+<meta property="og:title" content="学习笔记之Python(1)：多线程的若干问题">
+<meta property="og:url" content="http://www.misad.me/2018/04/27/2018-04-27-Thread/index.html">
 <meta property="og:site_name" content="MISaD&#39;s Blog">
-<meta property="og:description" content="依然还是先流水帐&amp;gt;.&amp;lt;  今年拿到了驾照，真心不容易，然后当晚就开了一段，后来还开了两次无锡，但开车还是要更多的练习，专注。 2月听说萌妹纸的四六级，她居然和我说什么越刷越低，她那么霸气侧漏的人怎么可以那样，所以成功刷的比她高，哈哈开心，她酷的时候真的很可爱。 2-3月全面改了五笔，真心不容易，此处应该感谢美美，多亏陪我聊天让我成功过渡。 看完了三体1，a walk to rememb">
+<meta property="og:description" content="概述准备深入学习下多线程，多进程，协程。之前似乎觉得多线程，多进程一定能让程序运行变快，但似乎涉及更深入的问题。在这篇文章中，学习了若干关于python多线程的知识，学习了一些常用的方法。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-25T15:45:38.713Z">
+<meta property="og:updated_time" content="2018-04-28T13:41:19.459Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="2017年计划">
-<meta name="twitter:description" content="依然还是先流水帐&amp;gt;.&amp;lt;  今年拿到了驾照，真心不容易，然后当晚就开了一段，后来还开了两次无锡，但开车还是要更多的练习，专注。 2月听说萌妹纸的四六级，她居然和我说什么越刷越低，她那么霸气侧漏的人怎么可以那样，所以成功刷的比她高，哈哈开心，她酷的时候真的很可爱。 2-3月全面改了五笔，真心不容易，此处应该感谢美美，多亏陪我聊天让我成功过渡。 看完了三体1，a walk to rememb">
+<meta name="twitter:title" content="学习笔记之Python(1)：多线程的若干问题">
+<meta name="twitter:description" content="概述准备深入学习下多线程，多进程，协程。之前似乎觉得多线程，多进程一定能让程序运行变快，但似乎涉及更深入的问题。在这篇文章中，学习了若干关于python多线程的知识，学习了一些常用的方法。">
 
 
 
@@ -133,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="http://www.misad.me/2016/12/31/2016-12-31-plan/"/>
+  <link rel="canonical" href="http://www.misad.me/2018/04/27/2018-04-27-Thread/"/>
 
 
 
 
 
-  <title>2017年计划 | MISaD's Blog</title>
+  <title>学习笔记之Python(1)：多线程的若干问题 | MISaD's Blog</title>
   
 
 
@@ -321,7 +321,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.misad.me/2016/12/31/2016-12-31-plan/">
+    <link itemprop="mainEntityOfPage" href="http://www.misad.me/2018/04/27/2018-04-27-Thread/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="MISaD">
@@ -338,7 +338,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">2017年计划</h1>
+          <h1 class="post-title" itemprop="name headline">学习笔记之Python(1)：多线程的若干问题</h1>
         
 
         <div class="post-meta">
@@ -350,8 +350,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-12-31T23:22:16+08:00">
-                2016-12-31
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-27T16:06:52+08:00">
+                2018-04-27
               </time>
             
 
@@ -373,8 +373,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Plans/" itemprop="url" rel="index">
-                    <span itemprop="name">计划</span>
+                  <a href="/categories/Algorithm/" itemprop="url" rel="index">
+                    <span itemprop="name">算法</span>
                   </a>
                 </span>
 
@@ -390,7 +390,7 @@
 
           
           
-             <span id="/2016/12/31/2016-12-31-plan/" class="leancloud_visitors" data-flag-title="2017年计划">
+             <span id="/2018/04/27/2018-04-27-Thread/" class="leancloud_visitors" data-flag-title="学习笔记之Python(1)：多线程的若干问题">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -418,33 +418,33 @@
       
 
       
-        <p>依然还是先流水帐&gt;.&lt;</p>
-<ol>
-<li>今年拿到了驾照，真心不容易，然后当晚就开了一段，后来还开了两次无锡，但开车还是要更多的练习，专注。</li>
-<li>2月听说萌妹纸的四六级，她居然和我说什么越刷越低，她那么霸气侧漏的人怎么可以那样，所以成功刷的比她高，哈哈开心，她酷的时候真的很可爱。</li>
-<li>2-3月全面改了五笔，真心不容易，此处应该感谢美美，多亏陪我聊天让我成功过渡。</li>
-<li>看完了三体1，a walk to remember,冰火1，目送，失乐园，one day，蒋勋讲宋词等书，还不够，年末买了ku，明年要多看点。<a id="more"></a></li>
-<li>上半年还看了很多p图技巧，弄出了许多自己比较满意的照片，但还差很远，还要努力学习。</li>
-<li>没字幕看了冰火和eevblog真心不容易，但还是要坚持，对自己提高还是挺多的。</li>
-<li>总是能在各种巧合的时候碰到萌妹纸，真的挺不容易，但还是没做到去年末的愿望要和她混熟，因为真的感觉和她三观很一致，难得碰到，也是真心喜欢，但是我还是坚持当时和女神说的那些，不应该做的坚决不做，遇到就是幸福了。每次真的特别巧，而且总是能一眼认出来。可惜没约成功= =好想问她好多好多问题。</li>
-<li>暑假时候解决了遗憾，挺不容易。</li>
-<li>今年在假期和爸妈出去了两次，难得陪他们出去，以后也不知道会怎样但有机会还是要一起出去玩，开心。还一起跑步，身体也渐好。</li>
-<li>下半年基本没做什么，课也没去上，然后也没怎么出去玩，中间出去吃的一顿是和丽洁，认识很不容易，她还给我带了马来西亚的咖啡和咖喱，希望以后还能碰见她，要加油来中国哦~</li>
-<li>考研其实不是特别顺利，总是这样，平时很厉害的样子但到关键时刻就掉链子，其实还是比较水，但感谢小伙伴们一起努力学习让我有动力，嗯感谢萌妹纸开导我（一定是的~。也很感谢她，真的，一直是我的动力，但这样总是感觉有时候动力不足。很想约她一起说说话。。。唉= =可是都好久没有看见了。</li>
-<li>16年没有去远的地方玩，这可能是除了和萌妹纸混熟之外唯一没完成的愿望了。。。好想有空去日本自由行。<br>其他还有很多未尽的事都记在微信了。。去年说要少玩手机其实应该可以算是做到了，很少找人聊天了，除了有限的几个人说说，其他很少主动说。。。然后朋友圈一直发是因为把它当日记了。。挺不错的。</li>
-</ol>
-<hr>
-<p>16年应该依旧很平凡，关于17年，写计划这事其实是去年才真的开始的，都是些不起眼的小事，但却无意做成了挺多，明年还要努力，但还是想先写点小事希望都可以都完成。至于更多的还是要看考没考上研，应该会有所不同。<br>最想完成的几件事</p>
-<ol>
-<li>练字，考核结果是楷书能写的基本可以看。</li>
-<li>python或者是个人blog希望能学习并完成一个</li>
-<li>去比较远的地方玩</li>
-<li>如果有可能，还要和萌妹纸混熟一点，感觉她很不一样，总是能一下看出来，但后来就不太准了- -，毕业了就很难看到了，但希望以后还有机会。</li>
-<li>要为自己找好出路并努力，以后还是想走纯工科的技术路线，但可能会比较难，希望自己可以努力做到</li>
-<li>minecraft建设大业向前推进一大步~</li>
-<li>开通了ku希望明年一个月可以看掉至少一本文学类书。依然要坚持看剧和eevblog，习惯没有字幕。<br>专业书的话要看考研结果= =</li>
-<li>其他应该要等结果出来再定了。留个坑。<br>希望自己可以慢慢的改变，很多时候，我习惯不是特别好，容易惹别人生气，并没有太多别的原因，不会说话吧，但毫无恶意，只是希望很多时候能够相互坦诚，也希望大度，大方，无私的人可以活得更幸福，这会是个自私的社会，一直也都是，而且生活所迫很多人都会改变，但还是希望能多点理解，多点关心吧，总是套路得人心毕竟不是我喜欢的。应该也是极其厌恶的。个人的努力并不会有结果，而且会成为异类。2016国际国内都不容易，希望2017可以更好。中华民族伟大复兴的中国梦，加油，中国的少年们加油~</li>
-</ol>
+        <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>准备深入学习下多线程，多进程，协程。之前似乎觉得多线程，多进程一定能让程序运行变快，但似乎涉及更深入的问题。<br>在这篇文章中，学习了若干关于python多线程的知识，学习了一些常用的方法。<br><a id="more"></a></p>
+<h1 id="python的多线程"><a href="#python的多线程" class="headerlink" title="python的多线程"></a>python的多线程</h1><p>多线程在密集IO操作时效果明显。python中由于<strong>GIL(全局解释锁)</strong>的存在，一个线程访问解释器之后，其他的线程就需要等待这个线程释放之后才可以访问（保护共享资源）。因此虽然Python解释器可以运行多个线程，但在<strong>任一时刻</strong>，其实只有<strong>一个线程</strong>在解释器中运行（交替切换），python的多线程是<strong>单核多线程</strong>，也即不管计算机有几个核心，同一时刻只能跑一个线程，只能有效利用一个核心。</p>
+<p>在使用多线程时需要注意的是，构建一个线程需要较大的内存开销，不能构建太多，同时线程越多，花在切换运行各线程的时间也会越多，运行多线程时，还会涉及到不同线程间的共享数据同步，如下载时，传给下载函数的url要事先分组再对每一组构建一个线程。</p>
+<h1 id="线程的阻塞——join-方法"><a href="#线程的阻塞——join-方法" class="headerlink" title="线程的阻塞——join()方法"></a>线程的阻塞——join()方法</h1><p>每一个进程会默认产生一个主线程，当执行多线程时，主线程再建立多个子线程。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> threading <span class="keyword">import</span> Thread</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyThread</span><span class="params">(Thread)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,number)</span>:</span></span><br><span class="line">        Thread.__init__(self)  <span class="comment">#类继承</span></span><br><span class="line">        self.thread_number = number</span><br><span class="line">        <span class="comment">##### self.setDaemon(True) #设置守护线程，当其他线程都运行结束时，停止当前MyThread</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">run</span><span class="params">(self)</span>:</span></span><br><span class="line">        show_thread(self.thread_number)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">show_thread</span><span class="params">(number)</span>:</span></span><br><span class="line">    time.sleep(<span class="number">1</span>)</span><br><span class="line">    print(<span class="string">'thread : '</span> + str(number) + <span class="string">' is running'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ ==<span class="string">'__main__'</span>:</span><br><span class="line">    t1 = time.time()</span><br><span class="line">    print(<span class="string">'main thread is running'</span>)</span><br><span class="line">    thread_group = []</span><br><span class="line">    <span class="keyword">for</span> thread_num <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">5</span>):</span><br><span class="line">        t = MyThread(thread_num)</span><br><span class="line">        thread_group.append(t)</span><br><span class="line">    print(<span class="string">'thread_group_generated'</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> one_thread <span class="keyword">in</span> thread_group:</span><br><span class="line">        one_thread.start()</span><br><span class="line">    print(<span class="string">'thread started'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># for one_thread in thread_group:</span></span><br><span class="line">        <span class="comment"># one_thread.join()#阻塞主线程</span></span><br><span class="line">    <span class="comment"># print('thread joined')</span></span><br><span class="line"></span><br><span class="line">    print(<span class="string">'main thread ended'</span>)</span><br><span class="line">    print(time.time() - t1)</span><br></pre></td></tr></table></figure>
+<p>输出：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">main thread <span class="keyword">is</span> running</span><br><span class="line">thread_group_generated</span><br><span class="line">thread started</span><br><span class="line">main thread ended</span><br><span class="line"><span class="number">0.0019998550415039062</span></span><br><span class="line">thread : <span class="number">0</span> <span class="keyword">is</span> running</span><br><span class="line">thread : <span class="number">4</span> <span class="keyword">is</span> running</span><br><span class="line">thread : <span class="number">3</span> <span class="keyword">is</span> running</span><br><span class="line">thread : <span class="number">1</span> <span class="keyword">is</span> running</span><br><span class="line">thread : <span class="number">2</span> <span class="keyword">is</span> running</span><br></pre></td></tr></table></figure>
+<p>激活注释语句后，输出：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">main thread <span class="keyword">is</span> running</span><br><span class="line">thread_group_generated</span><br><span class="line">thread started</span><br><span class="line">thread : <span class="number">0</span> <span class="keyword">is</span> running</span><br><span class="line">thread : <span class="number">4</span> <span class="keyword">is</span> running</span><br><span class="line">thread : <span class="number">2</span> <span class="keyword">is</span> running</span><br><span class="line">thread : <span class="number">3</span> <span class="keyword">is</span> running</span><br><span class="line">thread : <span class="number">1</span> <span class="keyword">is</span> running</span><br><span class="line">thread joined</span><br><span class="line">main thread ended</span><br><span class="line"><span class="number">1.0050575733184814</span></span><br></pre></td></tr></table></figure>
+<p>当没有.join()方法时，主线程不等待子线程执行，直接运行结束，可以看出当.start()方法和.join()方法分开执行时各线程执行是乱序，而当join()<strong>紧贴</strong>在start()后面时，顺序执行，此时的多线程失去意义。因此当后续主程序要处理在多线程执行完成后的任务时，需要用join()方法阻塞主线程，防止出错。</p>
+<p>从打印的运行时间上能看出，如果不使用多线程时，直接用for循环执行show_thread()函数，时间显示为<strong>5.001286268234253</strong>，除去等待时间5秒，多线程运行时间似乎还多了，多出的时间除了多的程序，主要时间开销还在<strong>线程间的切换</strong>。</p>
+<h1 id="线程间通信"><a href="#线程间通信" class="headerlink" title="线程间通信"></a>线程间通信</h1><p>为了确保线程间安全通信，使用queue来实现线程的安全存储结构</p>
+<p>Queue的基本使用方法</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> queue</span><br><span class="line">q = queue.Queue()</span><br><span class="line">q.put((<span class="number">1</span>,<span class="string">'a'</span>))</span><br><span class="line">int_data, str_data = q.get() <span class="comment"># get每次获取一个元素，直接拆分</span></span><br><span class="line"><span class="comment"># q.queue() # 可获取queue中所有对象</span></span><br></pre></td></tr></table></figure>
+<p><strong>queue在每次使用数据后会从queue中删除，防止重复获得数据</strong></p>
+<p>还可以用queue()来构建线程池</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> queue</span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Threadingpool</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,max_num = <span class="number">5</span>)</span>:</span><span class="comment"># 最大线程数</span></span><br><span class="line">        self.queue = queue.Queue(max_num)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(max_num):</span><br><span class="line">            self.queue.put(threading.Thread)</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">getthreading</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self.queue.get()</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">addthreading</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.queue.put(threading.Thread)</span><br><span class="line">  </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">(p,i)</span>:</span></span><br><span class="line">    time.sleep(<span class="number">1</span>)</span><br><span class="line">    print(i)</span><br><span class="line">    p.addthreading()</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    p = Threadingpool()</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">20</span>):</span><br><span class="line">        thread = p.getthreading()</span><br><span class="line">        t = thread(target = func, args = (p,i))</span><br><span class="line">        t.start()</span><br></pre></td></tr></table></figure>
+<p>由于任务比较简单，但从输出可以看出，同时以5个数为一组打印数字。</p>
+<h1 id="线程通知"><a href="#线程通知" class="headerlink" title="线程通知"></a>线程通知</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> threading <span class="keyword">import</span> Event, Thread</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_event</span><span class="params">(one_event)</span>:</span></span><br><span class="line">    print(<span class="string">'thread run'</span>) <span class="comment"># 2</span></span><br><span class="line">    one_event.wait() <span class="comment"># 休眠线程 # 3</span></span><br><span class="line">    <span class="comment"># one_event.clear() </span></span><br><span class="line">    print(<span class="string">'thread sleep'</span>) <span class="comment"># 6</span></span><br><span class="line">e = Event()</span><br><span class="line">t = Thread(target = get_event,args = (e,))</span><br><span class="line">t.start() <span class="comment"># # 1</span></span><br><span class="line">print(<span class="string">'seth event1 sleep'</span>) <span class="comment">#4</span></span><br><span class="line">e.set() <span class="comment"># 唤醒整件 # 5</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># t = Thread(target = get_event,args = (e,))</span></span><br><span class="line"><span class="comment"># t.start()</span></span><br><span class="line"><span class="comment"># print('seth event2 sleep')</span></span><br><span class="line"><span class="comment"># e.set() # 唤醒整件</span></span><br></pre></td></tr></table></figure>
+<p>输出：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">thread run</span><br><span class="line">set event1 sleep</span><br><span class="line">thread sleep</span><br></pre></td></tr></table></figure>
+<p><strong>当重复调用.wait()时，需要用.clear()清除后才能进入休眠状态</strong></p>
+<h1 id="线程本地数据"><a href="#线程本地数据" class="headerlink" title="线程本地数据"></a>线程本地数据</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> threading</span><br><span class="line">local_data = threading.local()</span><br><span class="line">local_data.num = <span class="number">1</span></span><br><span class="line">print(local_data.num)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">()</span>:</span></span><br><span class="line">    local_data.num = <span class="number">2</span></span><br><span class="line">    print(local_data.num)</span><br><span class="line">    </span><br><span class="line">t = threading.Thread(target = f)</span><br><span class="line">t.start()</span><br><span class="line">print(local_data.num)</span><br></pre></td></tr></table></figure>
+<p>f()中的local_data.num只在本函数内有效，并不会修改主线程中的local_data.num。</p>
+<h1 id="线程锁——RLock-和Lock-方法"><a href="#线程锁——RLock-和Lock-方法" class="headerlink" title="线程锁——RLock()和Lock()方法"></a>线程锁——RLock()和Lock()方法</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">lock = threading.RLock()</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Func</span><span class="params">()</span>:</span><span class="comment"># 线程调用函数</span></span><br><span class="line">    lock.acquire()  <span class="comment"># 获得锁 </span></span><br><span class="line">    print(<span class="string">'123456'</span>)</span><br><span class="line">    time.sleep(<span class="number">1</span>)</span><br><span class="line">    lock.release()  <span class="comment"># 释放锁</span></span><br></pre></td></tr></table></figure>
+<p>线程执行无序，当要访问数据时，为了让数据准确性引入了这两个方法。</p>
+<p>区别是RLock()中acquire()可重复出现，只要与release()成对即可，而在Lock()方法中不行，只可出现一次。</p>
 
       
     </div>
@@ -474,7 +474,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Plan/" rel="tag"># 计划</a>
+            <a href="/tags/DivideAndConquer/" rel="tag"># 分治</a>
+          
+            <a href="/tags/Tech/" rel="tag"># 技术</a>
+          
+            <a href="/tags/Algorithm/" rel="tag"># 算法</a>
           
         </div>
       
@@ -487,8 +491,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/12/31/2015-12-31-plan/" rel="next" title="2016年计划">
-                <i class="fa fa-chevron-left"></i> 2016年计划
+              <a href="/2018/04/25/2018-04-25-downloadpics/" rel="next" title="多线程，多进程下微博图片">
+                <i class="fa fa-chevron-left"></i> 多线程，多进程下微博图片
               </a>
             
           </div>
@@ -497,8 +501,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/05/20/2017-5-20/" rel="prev" title="2017.5.20">
-                2017.5.20 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/04/28/2018-04-28/" rel="prev" title="20180428">
+                20180428 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -547,8 +551,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://github.com/qy19941014/blogimage/raw/master/img/Portrait.JPG"
@@ -654,6 +667,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#python的多线程"><span class="nav-number">2.</span> <span class="nav-text">python的多线程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#线程的阻塞——join-方法"><span class="nav-number">3.</span> <span class="nav-text">线程的阻塞——join()方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#线程间通信"><span class="nav-number">4.</span> <span class="nav-text">线程间通信</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#线程通知"><span class="nav-number">5.</span> <span class="nav-text">线程通知</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#线程本地数据"><span class="nav-number">6.</span> <span class="nav-text">线程本地数据</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#线程锁——RLock-和Lock-方法"><span class="nav-number">7.</span> <span class="nav-text">线程锁——RLock()和Lock()方法</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
